@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 520" role="img" aria-labelledby="t d">
+  <title id="t">System overview</title>
+  <desc id="d">The Flutter app keeps data in a local SQLite database and optionally mirrors it to Firebase for signed-in users. A serverless proxy relays aggregated data to a third-party language-model API for premium AI summaries. Billing, ads, analytics and notifications connect to platform services.</desc>
+  <defs>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e9e6f7; }
+      .h { font-size: 24px; font-weight: 700; }
+      .k { font-size: 12px; fill: #a99cf0; letter-spacing: 1.5px; font-weight: 700; }
+      .b { font-size: 16px; font-weight: 600; }
+      .s { font-size: 13px; fill: #b3adce; }
+      .note { font-size: 13px; fill: #9f98c0; font-style: italic; }
+      .app { fill: #1e2a4d; stroke: #5b78d6; stroke-width: 2; }
+      .store { fill: #17323a; stroke: #3aa7a0; stroke-width: 2.5; }
+      .cloud { fill: #2a2147; stroke: #8b7cf6; stroke-width: 2; }
+      .svc { fill: #1a2c3d; stroke: #4aa3d8; stroke-width: 2; }
+      .opt { fill: #2f2a1c; stroke: #d6a24a; stroke-width: 2; stroke-dasharray: 6 4; }
+      .arrow { stroke: #7f8fe0; stroke-width: 2; fill: none; marker-end: url(#a); }
+      .darrow { stroke: #d6a24a; stroke-width: 2; fill: none; stroke-dasharray: 6 4; marker-end: url(#ad); }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7f8fe0"/>
+    </marker>
+    <marker id="ad" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d6a24a"/>
+    </marker>
+  </defs>
+  <rect width="1300" height="520" rx="16" fill="#121021"/>
+  <text x="40" y="48" class="h">System overview: local-first app with optional cloud services</text>
+
+  <rect x="40" y="90" width="520" height="390" rx="14" class="app"/>
+  <text x="62" y="120" class="k">FLUTTER APP (ANDROID)</text>
+  <rect x="62" y="140" width="230" height="64" rx="10" class="svc"/>
+  <text x="78" y="166" class="b">Screens and sheets</text><text x="78" y="186" class="s">entry, history, trends, reports</text>
+  <rect x="310" y="140" width="230" height="64" rx="10" class="svc"/>
+  <text x="326" y="166" class="b">Riverpod state</text><text x="326" y="186" class="s">providers and notifiers</text>
+  <rect x="62" y="226" width="230" height="64" rx="10" class="svc"/>
+  <text x="78" y="252" class="b">Pure domain services</text><text x="78" y="272" class="s">trends, score, insights, export</text>
+  <rect x="310" y="226" width="230" height="64" rx="10" class="svc"/>
+  <text x="326" y="252" class="b">Repository layer</text><text x="326" y="272" class="s">one gateway to storage</text>
+  <rect x="62" y="312" width="478" height="70" rx="12" class="store"/>
+  <text x="80" y="340" class="b">SQLite database (on device)</text><text x="80" y="362" class="s">readings and logs, profile, reminders, medication schedules</text>
+  <rect x="62" y="400" width="230" height="64" rx="10" class="svc"/>
+  <text x="78" y="426" class="b">Sync subsystem</text><text x="78" y="446" class="s">durable queue, retry, merge</text>
+  <rect x="310" y="400" width="230" height="64" rx="10" class="svc"/>
+  <text x="326" y="426" class="b">Reminder scheduler</text><text x="326" y="446" class="s">native Android scheduling</text>
+
+  <rect x="660" y="90" width="270" height="80" rx="12" class="cloud"/>
+  <text x="678" y="118" class="k">FIREBASE</text>
+  <text x="678" y="142" class="b">Auth, Firestore mirror</text><text x="678" y="160" class="s">optional, for signed-in users</text>
+  <rect x="660" y="200" width="270" height="80" rx="12" class="cloud"/>
+  <text x="678" y="228" class="k">FIREBASE</text>
+  <text x="678" y="252" class="b">Analytics, Crashlytics</text><text x="678" y="270" class="s">usage and crash reporting</text>
+  <rect x="660" y="310" width="270" height="80" rx="12" class="svc"/>
+  <text x="678" y="338" class="k">PLATFORM</text>
+  <text x="678" y="362" class="b">Play Billing</text><text x="678" y="380" class="s">free tier and Pro subscription</text>
+  <rect x="660" y="420" width="270" height="60" rx="12" class="svc"/>
+  <text x="678" y="446" class="b">Ad mediation (AdMob)</text><text x="678" y="464" class="s">free tier only</text>
+
+  <rect x="1010" y="130" width="250" height="90" rx="12" class="opt"/>
+  <text x="1028" y="158" class="k">SERVERLESS PROXY</text>
+  <text x="1028" y="182" class="b">Premium AI relay</text><text x="1028" y="202" class="s">checks sign-in and entitlement</text>
+  <rect x="1010" y="270" width="250" height="90" rx="12" class="opt"/>
+  <text x="1028" y="298" class="k">THIRD PARTY</text>
+  <text x="1028" y="322" class="b">Language-model API</text><text x="1028" y="342" class="s">writes the optional summary text</text>
+
+  <path d="M560 130 H660" class="darrow"/>
+  <path d="M560 240 H660" class="arrow"/>
+  <path d="M560 350 H660" class="arrow"/>
+  <path d="M560 450 H660" class="arrow"/>
+  <path d="M560 185 H1010" class="darrow"/>
+  <text x="940" y="177" class="s">aggregates</text>
+  <path d="M1135 220 V270" class="darrow"/>
+  <text x="560" y="506" class="note">Dashed paths are optional or tier-dependent. The app keeps working from the local database when offline.</text>
+</svg>

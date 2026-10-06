@@ -1,0 +1,28 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Never publish secrets or signing material
+.env
+.env.*
+*.jks
+*.keystore
+*.p8
+*.p12
+*.pem
+*.key
+key.properties
+google-services.json
+GoogleService-Info.plist
+service-account*.json
+
+# Build / dependency output (this repo has none, kept as a guard)
+build/
+node_modules/
+.dart_tool/
+*.apk
+*.aab
+*.ipa
