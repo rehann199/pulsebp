@@ -14,6 +14,7 @@ Flutter · Dart · Riverpod · SQLite · Firebase · Serverless proxy
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare%20Workers-F38020?logo=cloudflare&logoColor=white)
+![For sale](https://img.shields.io/badge/Product-For%20sale-7C4DFF)
 
 <table>
   <tr>
@@ -45,6 +46,14 @@ PulseBP is a **logging and tracking tool**. The person using it types in values 
 - AI summaries, when enabled, are text generated from aggregated logged data and are informational only.
 
 This repository describes the **software engineering** of the app. It makes no statements about health outcomes.
+
+<!-- fw-sale:start -->
+## Reach & Availability
+
+| | |
+|---|---|
+| **Product sale** | This is a Future Watch product and it is **available to buy or license** for your own business. [Ask about buying PulseBP](https://futurewatch.co/contact?type=product&ref=pulsebp) or email [rehan@futurewatch.co](mailto:rehan@futurewatch.co). |
+<!-- fw-sale:end -->
 
 ## Product at a Glance
 
